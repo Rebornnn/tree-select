@@ -1,6 +1,6 @@
 import { flattenTreeData } from 'rc-tree/lib/utils/treeUtil';
 import type { FlattenNode } from 'rc-tree/lib/interface';
-import type { FilterFunc } from 'rc-select/lib/interface/generator';
+import type { FilterFunc } from 'bonree-select/lib/interface/generator';
 import type {
   FlattenDataNode,
   Key,
@@ -116,7 +116,7 @@ export function flattenOptions(options: any): FlattenDataNode[] {
   const cacheMap = new Map<React.Key, FlattenDataNode>();
   const flattenDateNodeList: (FlattenDataNode & { parentKey?: React.Key })[] = flattenList.map(
     option => {
-      const { data, key, value } = option as any as Omit<FlattenNode, 'data'> & {
+      const { data, key, value } = (option as any) as Omit<FlattenNode, 'data'> & {
         value: RawValueType;
         data: InternalDataEntity;
       };

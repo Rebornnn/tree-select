@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { useMemo } from 'react';
-import type { SelectProps, RefSelectProps, GenerateConfig } from 'rc-select/lib/generate';
-import generateSelector from 'rc-select/lib/generate';
-import { getLabeledValue } from 'rc-select/lib/utils/valueUtil';
+import type { SelectProps, RefSelectProps, GenerateConfig } from 'bonree-select/lib/generate';
+import generateSelector from 'bonree-select/lib/generate';
+import { getLabeledValue } from 'bonree-select/lib/utils/valueUtil';
 import { convertDataToEntities } from 'rc-tree/lib/utils/treeUtil';
 import { conductCheck } from 'rc-tree/lib/utils/conductUtil';
 import type { IconType } from 'rc-tree/lib/interface';
 import omit from 'rc-util/lib/omit';
-import type { FilterFunc } from 'rc-select/lib/interface/generator';
-import { INTERNAL_PROPS_MARK } from 'rc-select/lib/interface/generator';
+import type { FilterFunc } from 'bonree-select/lib/interface/generator';
+import { INTERNAL_PROPS_MARK } from 'bonree-select/lib/interface/generator';
 import useMergedState from 'rc-util/lib/hooks/useMergedState';
 import warning from 'rc-util/lib/warning';
 import TreeNode from './TreeNode';
@@ -614,7 +614,7 @@ export default function generate(config: {
   // =================================================================================
   // =                                    Generic                                    =
   // =================================================================================
-  const TreeSelect = RefTreeSelect as any as (<ValueType = DefaultValueType>(
+  const TreeSelect = (RefTreeSelect as any) as (<ValueType = DefaultValueType>(
     props: React.PropsWithChildren<TreeSelectProps<ValueType>> & {
       ref?: React.Ref<RefSelectProps>;
     },
