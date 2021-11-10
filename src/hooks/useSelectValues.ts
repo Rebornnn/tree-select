@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { DefaultValueType } from 'rc-select/lib/interface/generator';
+import type { DefaultValueType } from 'bonree-select/lib/interface/generator';
 import type { DataEntity } from 'rc-tree/lib/interface';
 import type { RawValueType, FlattenDataNode, Key, LabelValueType } from '../interface';
 import type { SkipType } from './useKeyValueMapping';

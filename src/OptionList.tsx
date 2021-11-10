@@ -1,7 +1,7 @@
 import * as React from 'react';
 import KeyCode from 'rc-util/lib/KeyCode';
 import useMemo from 'rc-util/lib/hooks/useMemo';
-import type { RefOptionListProps } from 'rc-select/lib/OptionList';
+import type { RefOptionListProps } from 'bonree-select/lib/OptionList';
 import type { TreeProps } from 'rc-tree';
 import Tree from 'rc-tree';
 import type { EventDataNode, ScrollTo } from 'rc-tree/lib/interface';
